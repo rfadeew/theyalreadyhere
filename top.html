@@ -3,6 +3,21 @@
 <head>
   <title>Topbar</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <style>
+    
+
+      .blink_me {
+  animation: blinker .5s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    color: red;
+  }
+  100% { color: blue; }
+}
+  
+  </style>
 </head>
 <body background="assets/metal-tile.gif" text="#00FF00" link="#00FFFF" vlink="#FFCC00" alink="#FF0000"
       leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
@@ -10,23 +25,25 @@
 <table width="100%" height="110" cellpadding="0" cellspacing="0" border="0" bgcolor="#000000">
   <tr>
     <td width="160" align="center">
-      <img src="assets/eye.gif" alt="Eye">
+      <img src="assets/saucer.webp" alt="Eye">
     </td>
     <td>
       <marquee behavior="scroll" scrollamount="5">
         <font face="Impact, Verdana" size="+3" color="#00FFCC">THE TRUTH IS OUT THERE — TRUTH ARCHIVES 1999</font>
       </marquee>
       <center>
-        <font face="Verdana" size="+1" color="#CCCCCC">Обновлено: 21.10.1999 • Лучшее в 800×600 &amp; полноэкран</font>
+        <font face="Verdana" size="+1">Обновлено: 31.10.1999 • </font><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" class="blink_me" target="_blank"><font face="Verdana" size="+1">Лучшее в 800×600 &amp; полноэкранное видео с горячими девчонками!</font></a>
       </center>
     </td>
     <td width="220" align="center">
-      <font face="Courier New" size="+1">Гость №</font><br>
-      <img src="assets/counter.gif" alt="counter"><br>
-      <img src="assets/under-construction.gif" alt="UC">
+      <font face="Courier New" size="+1">Гость № <span id="guest-number">№ 42</span></font><br>
+
     </td>
   </tr>
 </table>
-
+<script>
+    const rndInt = Math.floor(Math.random() * 1000) + 1
+    document.getElementById('guest-number').innerHTML = rndInt.toString();
+</script>
 </body>
 </html>
